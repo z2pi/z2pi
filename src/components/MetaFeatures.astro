@@ -1,0 +1,53 @@
+---
+const metaFeatures = [
+  {
+    title: 'Smart Search',
+    description: 'Instantly locate documentation, code snippets, or dependencies with AI-powered search.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>`
+  },
+  {
+    title: 'Knowledge Graph',
+    description: 'Visualize open-source contributions and collaborations in an interactive network.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+    </svg>`
+  },
+  {
+    title: 'Real-time Metrics',
+    description: 'Get instant insights into usage, performance, and community impact.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+    </svg>`
+  }
+];
+---
+<section id="meta-features" class="py-20 bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Meta Features</h2>
+      <p class="text-xl text-gray-400">Advanced tools powered by cutting-edge technology</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {metaFeatures.map(feature => (
+        <div class="relative p-8 bg-gray-900 rounded-2xl hover:bg-gray-900/80 transition-colors duration-300">
+          <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-red/10 to-accent-orange/10 rounded-2xl"></div>
+          <div class="relative">
+            <div class="h-12 w-12 bg-accent-orange rounded-xl flex items-center justify-center mb-6 text-white">
+              <Fragment set:html={feature.icon} />
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+            <p class="text-gray-400">{feature.description}</p>
+            <a href="#" class="inline-flex items-center mt-6 text-accent-orange hover:text-accent-orange/80 transition-colors duration-300">
+              Learn More
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

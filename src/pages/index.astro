@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import MetaFeatures from '../components/MetaFeatures.astro';
+import Blogs from '../components/Blogs.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Z2pi - Open Source Innovation">
+  <Navbar client:load />
+  <main class="bg-gray-900">
+    <Hero />
+    <Features />
+    <MetaFeatures />
+    <Blogs />
+  </main>
+  <Footer />
+</Layout>
