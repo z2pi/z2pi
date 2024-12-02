@@ -1,0 +1,36 @@
+---
+const stats = [
+  {
+    value: '100K+',
+    label: 'Active Contributors'
+  },
+  {
+    value: '500+',
+    label: 'Open Source Projects'
+  },
+  {
+    value: '1M+',
+    label: 'Downloads'
+  },
+  {
+    value: '50+',
+    label: 'Countries'
+  }
+];
+---
+<section class="py-20 bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Global Impact</h2>
+      <p class="text-xl text-gray-400">Our contribution to the open-source community</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {stats.map(stat => (
+        <div class="text-center">
+          <div class="text-4xl font-bold text-primary mb-2">{stat.value}</div>
+          <div class="text-gray-400">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
